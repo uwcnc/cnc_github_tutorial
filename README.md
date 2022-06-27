@@ -1,8 +1,14 @@
 # CNC Tutorials: Git/Github
 
 ## Intro
-Welcome to the Git/Github tutorial repository! Here we will aim to demo a series of useful workflows to get started:
+Welcome to the Git/Github tutorial repository! We will use this repo to demonstrate a workflow that allows for collaborative development of a shared code repository. It has the features:
+- "main" (previously "master") contains the source of truth
+- development happens separate branches
+- changes get merged into master through Pull Requests (PRs)
+![GitHub-Flow copy](https://user-images.githubusercontent.com/97498519/176041670-c7b471b6-1b25-43c8-9c8f-b7c57b80bd77.png)
 
+
+The steps through this demo are:
 1. Cloning a repo
 2. Creating a new branch
 3. Pushing the branch, creating a pull request
@@ -47,5 +53,9 @@ git commit -am "<SOME COMMIT MESSAGE>"
 ```
 
 ## 3. Pushing the branch, creating a pull request
-Currently your new branch only exists locally and not in the remote repository. 
+Currently your new branch only exists locally and not in the remote repository. To "push" it to the remote repo, run
+```
+git push origin <YOUR_BRANCH_NAME>
+```
+This will create a remote branch with the same name, and copy your changes to that branch. 
 
