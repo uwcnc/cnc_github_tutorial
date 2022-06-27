@@ -3,10 +3,9 @@
 ## Intro
 Welcome to the Git/Github tutorial repository! We will use this repo to demonstrate a workflow that allows for collaborative development of a shared code repository. It has the features:
 - "main" (previously "master") contains the source of truth
-- development happens separate branches
-- changes get merged into master through Pull Requests (PRs)
-![GitHub-Flow copy](https://user-images.githubusercontent.com/97498519/176041670-c7b471b6-1b25-43c8-9c8f-b7c57b80bd77.png)
-
+- development occurs on separate, non-"main" branches
+- changes get merged into "main" through Pull Requests (PRs)
+<img width="800" alt="GitHub-Flow copy" src="https://user-images.githubusercontent.com/97498519/176041670-c7b471b6-1b25-43c8-9c8f-b7c57b80bd77.png">
 
 The steps through this demo are:
 1. Cloning a repo
@@ -25,7 +24,7 @@ For this repo, the command to run locally will be:
 git clone https://github.com/pqz317/cnc_github_tutorial.git
 ```
 The URL can always be found under the "Clone" Section of the Github page of the repo: 
-<img width="1438" alt="Screen Shot 2022-06-27 at 9 42 45 AM" src="https://user-images.githubusercontent.com/97498519/175992957-a6794a57-b257-474e-b2ef-73859bfe40d2.png">
+<img width="800" alt="Screen Shot 2022-06-27 at 9 42 45 AM" src="https://user-images.githubusercontent.com/97498519/175992957-a6794a57-b257-474e-b2ef-73859bfe40d2.png">
 Once cloned, you should have a directory `cnc_github_tutorial` in your local filesystem. Run `git status` to verify that the directory is a git repository, and that you are on the `main` branch. An example output: 
 ```
 Patricks-MacBook-Pro:cnc_github_tutorial patrick$ git status
@@ -37,7 +36,7 @@ nothing to commit, working tree clean
 You have now successfully cloned a repo!
 
 ## 2. Creating a new local branch
-One general convention is to keep the `main` branch tracking `origin/main`, and perform any development on a different branch
+One general convention is to keep your local `main` branch tracking the `main` in the remote, and perform any development on a different branch
 To do this, run:
 ```
 git checkout -b <SOME_BRANCH_NAME>
@@ -47,7 +46,7 @@ Once saved, we can check the status of our branch using
 ```
 git status
 ```
-and add + commit our changes using: 
+and add+commit our changes using: 
 ```
 git commit -am "<SOME COMMIT MESSAGE>"
 ```
