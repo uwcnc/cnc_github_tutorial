@@ -10,8 +10,9 @@ Welcome to the Git/Github tutorial repository! We will use this repo to demonstr
 The steps through this demo are:
 1. Cloning a repo
 2. Creating a new branch
-3. Pushing the branch, creating a pull request
-4. Merging changes from another branch, dealing with merge conflicts
+3. Pushing the branch, 
+4. Creating a pull request
+5. Dealing with merge conflicts
 
 ## 1. Cloning a repo
 If there is an existing remote repository you'd like to start development on, usually the first thing to do would be to clone that repository to your local machine. 
@@ -51,10 +52,14 @@ and add+commit our changes using:
 git commit -am "<SOME COMMIT MESSAGE>"
 ```
 
-## 3. Pushing the branch, creating a pull request
+## 3. Pushing the branch
 Currently your new branch only exists locally and not in the remote repository. To "push" it to the remote repo, run
 ```
 git push origin <YOUR_BRANCH_NAME>
 ```
-This will create a remote branch with the same name, and copy your changes to that branch. 
+This will create a remote branch with the same name, and "push" your changes in your local branch to that remote branch. 
+
+## 4. Creating a Pull Request
+Your changes are on a branch on remote, but these changes are not integrated into the `main` branch yet. To integrate them, you can issue a "Pull Request", or a "request for someone to pull your changes into `main`"
+Github allows you to do this easily through their website. 
 
