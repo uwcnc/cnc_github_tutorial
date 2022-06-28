@@ -74,31 +74,3 @@ Doing so both backs up your changes, and gets you ready to create a pull request
 Now, to integrate your changes into the "Parent" repo, you can create a Pull Request via Github. 
 Navigate to https://github.com/<YOUR_USERNAME>/cnc_github_tutorial. 
 
-
-
-## 2. Creating a new local branch
-One general convention is to keep your local `main` branch tracking the `main` in the remote, and perform any development on a different branch
-To do this, run:
-```
-git checkout -b <SOME_BRANCH_NAME>
-```
-This will checkout create a new branch, and switch over to that branch. Any changes you make to files now will occur on this new branch, and not affect `main`. Using your favorite text editor, feel free to make any changes to the `test_file.txt` file. 
-Once saved, we can check the status of our branch using 
-```
-git status
-```
-and add+commit our changes using: 
-```
-git commit -am "<SOME COMMIT MESSAGE>"
-```
-
-## 3. Pushing the branch
-Currently your new branch only exists locally and not in the remote repository. To "push" it to the remote repo, run
-```
-git push origin <YOUR_BRANCH_NAME>
-```
-This will create a remote branch with the same name, and "push" your changes in your local branch to that remote branch. 
-
-## 4. Creating a Pull Request
-Your changes are on a branch on remote, but these changes are not integrated into the `main` branch yet. To integrate them, you can issue a "Pull Request", or a "request for someone to pull your changes into `main`"
-Github allows you to do this easily through their website. 
