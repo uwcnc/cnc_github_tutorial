@@ -116,7 +116,9 @@ Doing so both backs up your changes, and gets you ready to create a pull request
 
 ## 5. Create a Pull Request to integrate your changes into the "Parent" repo
 Now, to integrate your changes into the "Parent" repo, you can create a Pull Request via Github. 
-Navigate to https://github.com/<YOUR_USERNAME>/cnc_github_tutorial. 
+
+Navigate to https://github.com/<YOUR_USERNAME>/cnc_github_tutorial. Under the "Pull requests" tab, make a new pull request and select the branches you want the pull from/to: 
+![14_PRacrossfork2](https://user-images.githubusercontent.com/91637560/176301427-5b678457-0d2a-4f57-b986-a025382b4d32.PNG)
 
 
 ## 6. Fetch changes from the parent repo to your local repo
