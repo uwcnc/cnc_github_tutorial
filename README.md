@@ -2,13 +2,15 @@
 
 ## Intro
 Welcome to the Git/Github tutorial repository! We will use this repo to demonstrate a workflow that allows for collaborative development of a shared code repository. It has the features:
-- "main" (previously "master") contains the source of truth
-- development occurs on separate, non-"main" branches
-- changes get merged into "main" through Pull Requests (PRs)
-<img width="800" alt="GitHub-Flow copy" src="https://user-images.githubusercontent.com/97498519/176041670-c7b471b6-1b25-43c8-9c8f-b7c57b80bd77.png">
+- individual developers "fork" some shared repository
+- development occurs on individual, forked remote/local repositories
+- individual development gets integrated into shared repository through Pull Requests (PRs)
+![featured_hud478d74d48d19bfd1c1c03fc398c8033_312322_720x0_resize_lanczos_3](https://user-images.githubusercontent.com/97498519/176066441-ac8fadbf-a6c3-4dd1-b137-d59274bdcb0e.png)
+
+**Honorable mention**: There is a separate workflow that you may encounter which uses branches within the same repository wit
 
 The steps through this demo are:
-1. Cloning a repo
+1. Forking a repo
 2. Creating a new branch
 3. Pushing the branch, 
 4. Creating a pull request
