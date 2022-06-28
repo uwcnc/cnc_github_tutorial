@@ -1,4 +1,4 @@
-# CNC Tutorials: Git/Github
+# Feature Branch Workflow
 
 ## Intro
 Welcome to the Git Feature Branch workflow tutorial! We will use this repo to demonstrate a workflow that allows for collaborative development of a shared code repository. It has the features:
