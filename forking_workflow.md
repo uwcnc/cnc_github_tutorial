@@ -1,27 +1,27 @@
-# CNC Tutorials: Git/Github
+# Forking Workflow
 
 ## Intro
-Welcome to the Git/Github tutorial repository! We will use this repo to demonstrate a workflow that allows for collaborative development of a shared code repository. It has the features:
+Welcome to the Forking Workflow tutorial! Here we will demonstrate a workflow that allows for collaborative development of a shared code repository. It has the features:
 - individual developers "fork" some shared repository
 - development occurs on individual, forked remote/local repositories
 - individual development gets integrated into shared repository through Pull Requests (PRs)
 ![featured_hud478d74d48d19bfd1c1c03fc398c8033_312322_720x0_resize_lanczos_3](https://user-images.githubusercontent.com/97498519/176066441-ac8fadbf-a6c3-4dd1-b137-d59274bdcb0e.png)
 
-**Honorable mention**: There is a separate workflow that you may encounter which uses branches within the same repository wit
+**Honorable mention**: There is a separate workflow that you may encounter which uses branches within the same repository to achieve similar affects. There is a tutorial for that as well: https://github.com/pqz317/cnc_github_tutorial/blob/main/feature_branch_workflow.md 
 
 The steps through this demo are:
-1. Forking a repo
-2. Creating a new branch
-3. Pushing the branch, 
-4. Creating a pull request
-5. Dealing with merge conflicts
+1. Fork this repo on Github
+2. Clone this forked repo to a local repo
+3. Make local changes 
+4. Push your changes to your forked repo on Github
+5. Creating a Pull Request to integrate your changes into the "parent" repo
+6. Fetching changes from the parent repo to your local repo
+7. (Potentially) resolving 
 
-## 1. Cloning a repo
-If there is an existing remote repository you'd like to start development on, usually the first thing to do would be to clone that repository to your local machine. 
-To obtain a local copy of any repo, go to a directory you'd like to place the repo in, and run: 
-```
-git clone <REPOSITORY_URL>
-```
+## 1. Forking a Repo
+If there is an existing remote repository you'd like to start development on, usually the first thing to do would be to create a "fork" of this repository for yourself. This provides you with a repository on Github that is a clone of its "parent", where you can do any type of development and testing on without affecting the parent. 
+Fork this repo with 
+
 For this repo, the command to run locally will be: 
 ```
 git clone https://github.com/pqz317/cnc_github_tutorial.git
