@@ -49,6 +49,30 @@ Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
 ```
+**Note**: `origin/main` here refers to the main branch of the origin repo. `Main` is the main branch. We won't go into branching too much here, so just ignore that. `Origin` is a name for the remote repository this local repository is cloned from, the "Forked" repo. Git by default keeps track of this remote repo after a `git clone` command. It will also be helpul for git to keep track of another remote repo, the "Parent" repo. To configure this, run:
+```
+git remote add upstream https://github.com/uwcnc/cnc_github_tutorial.git
+```
+This will tell your local git repo about another remote repo, and name it upstream. This will come in handy when there are changes to the parent repo you want to keep track of locally. 
+
+## 3. Make local changes 
+In your local repository, feel free to make any changes you'd like. For simplicity, you can create a new file `<YOUR_NAME>_test.txt` and add some text to it. Once that is saved, remember to `git add` and `git commit` your changes:
+```
+git add . && git commit -m "created new file"
+```
+
+## 4. Push your changes to your "Forked" repo on Github
+You've made and commited changes to your local repository, now its time to push your changes to your "Forked" remote repo on Github!
+run: 
+```
+git push origin master
+```
+Doing so both backs up your changes, and gets you ready to create a pull request. Note again, origin here is referring to the forked remote repo. 
+
+
+## 5. Create a Pull Request to integrate your changes into the "Parent" repo
+Now, to integrate your changes into the "Parent" repo, you can create a Pull Request via Github. 
+Navigate to https://github.com/<YOUR_USERNAME>/cnc_github_tutorial. 
 
 
 
