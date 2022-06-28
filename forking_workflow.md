@@ -26,11 +26,13 @@ The steps through this demo are:
 6. Fetch changes from the parent repo to your local repo
 7. (Potentially) Resolve merge conflicts
 
+
 ## 1. Fork this "Parent" Repo to create a "Forked" Repo
 Say there is an existing remote repository that belongs to some organization, and you'd like to start development on it, usually the first thing to do would be to create a "fork" of this repository for yourself. This provides you with a repository on Github that is a clone of its "parent", where you can do any type of development and testing on without affecting the parent. 
 
 For this tutorial, you can fork this repo with the "fork" button on Github: 
 <img width="1000" alt="Screen Shot 2022-06-27 at 7 00 30 PM" src="https://user-images.githubusercontent.com/97498519/176095938-ef63421c-a878-426b-bcfb-2a3e736d3b2c.png">
+
 You have now successfully "forked" the `cnc_github_tutorial` repo, and created a new repo that is `<YOUR_USERNAME>/cnc_github_tutorial`
 
 
@@ -41,6 +43,7 @@ git clone https://github.com/<YOUR_USERNAME>/cnc_github_tutorial.git
 ```
 The URL can always be found under the "Clone" Section of the Github page of your "forked" repo: 
 <img width="800" alt="Screen Shot 2022-06-27 at 9 42 45 AM" src="https://user-images.githubusercontent.com/97498519/175992957-a6794a57-b257-474e-b2ef-73859bfe40d2.png">
+
 Once cloned, you should have a directory `cnc_github_tutorial` in your local filesystem. Run `git status` to verify that the directory is a git repository, and that you are on the `main` branch. An example output: 
 ```
 Patricks-MacBook-Pro:cnc_github_tutorial patrick$ git status
@@ -53,7 +56,31 @@ nothing to commit, working tree clean
 ```
 git remote add upstream https://github.com/uwcnc/cnc_github_tutorial.git
 ```
-This will tell your local git repo about another remote repo, and name it upstream. This will come in handy when there are changes to the parent repo you want to keep track of locally. 
+This will tell your local git repo about another remote repo, and name it upstream. This will come in handy when there are changes to the "Parent" repo you want to keep track of locally. 
+
+### **To do this in VSCode:**
+
+Open a new window and "Clone Git Repository":
+![01_vscode_welcome_inked](https://user-images.githubusercontent.com/91637560/176282400-1a05da04-0280-47e0-bb6b-ad517545b5fb.jpg)
+
+Paste the clone URL and create a local directory `cnc_github_tutorial` for the repository location:
+![02_vscode_cloneURL](https://user-images.githubusercontent.com/91637560/176283021-f46afeca-90ff-4fe8-8c59-9e42ed981ca4.PNG)
+
+Check/change what branch you're on in the bottom left corner:                                                                                                
+![04_branch](https://user-images.githubusercontent.com/91637560/176284703-2a052218-a1cd-4180-9b04-44dbe842f0f1.PNG)
+
+Add the remote "Parent" repo by opening the Command Palette (Ctrl+Shift+P) and typing `Git: Add Remote`:
+![image](https://user-images.githubusercontent.com/91637560/176289001-adaaf1e3-73f3-4bcb-add5-042edb2fffa6.png)
+
+Paste the parent URL (found under the "Clone" section on Github):
+![image](https://user-images.githubusercontent.com/91637560/176289478-861f6c9e-d755-459c-bbd1-58345f44e9db.png)
+
+Name the "Parent" repo `upstream`:                                                                                                
+![image](https://user-images.githubusercontent.com/91637560/176290365-b1fdd234-8979-409d-98de-f37e2125f803.png)
+
+Now you have access to local, remote (origin), and remote parent (upstream) branches:
+![image](https://user-images.githubusercontent.com/91637560/176294456-3d057a92-155c-4243-9e63-4d6fe83d5d36.png)
+
 
 ## 3. Make local changes 
 In your local repository, feel free to make any changes you'd like. For simplicity, you can create a new file `<YOUR_NAME>_test.txt` and add some text to it. Once that is saved, remember to `git add` and `git commit` your changes:
@@ -61,18 +88,37 @@ In your local repository, feel free to make any changes you'd like. For simplici
 git add . && git commit -m "created new file"
 ```
 
+### **To do this in VSCode:**
+
+Find the "Source Control" tab on the left panel and select the file you have created/modified to see a side-by-side comparison of the changes:
+![08_changes](https://user-images.githubusercontent.com/91637560/176285647-d6b56a4f-7c29-4ad4-8ed9-b47fc2249e09.PNG)
+
+Use "+" to stage changes to specific files or stage all changes:
+![09_stagechanges](https://user-images.githubusercontent.com/91637560/176286062-4e64258b-0b36-49bd-82bd-698a483601d0.PNG)
+
+Add a commit message and use "✓" to commit the staged changes:
+![10_commitchanges](https://user-images.githubusercontent.com/91637560/176286244-517f9ba3-62cd-47ab-8487-d9e6f8588a51.PNG)
+
+
 ## 4. Push your changes to your "Forked" repo on Github
 You've made and commited changes to your local repository, now its time to push your changes to your "Forked" remote repo on Github!
-run: 
+
+Run: 
 ```
 git push origin master
 ```
 Doing so both backs up your changes, and gets you ready to create a pull request. Note again, origin here is referring to the forked remote repo. 
 
+### **To do this in VSCode:**
+"Sync Changes" on the "Source Control" tab or simply use the sync button in the bottom left corner:
+![12_pushchanges_inked](https://user-images.githubusercontent.com/91637560/176287487-a3f7a27b-0165-4440-8201-036b100d0070.jpg)
+
 
 ## 5. Create a Pull Request to integrate your changes into the "Parent" repo
 Now, to integrate your changes into the "Parent" repo, you can create a Pull Request via Github. 
-Navigate to https://github.com/<YOUR_USERNAME>/cnc_github_tutorial. 
+
+Navigate to https://github.com/<YOUR_USERNAME>/cnc_github_tutorial. Under the "Pull requests" tab, make a new pull request and select the branches you want the pull from/to: 
+![14_PRacrossfork2](https://user-images.githubusercontent.com/91637560/176301427-5b678457-0d2a-4f57-b986-a025382b4d32.PNG)
 
 
 ## 6. Fetch changes from the parent repo to your local repo
