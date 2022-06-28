@@ -1,32 +1,45 @@
 # Forking Workflow
 
 ## Intro
-Welcome to the Forking Workflow tutorial! Here we will demonstrate a workflow that allows for collaborative development of a shared code repository. It has the features:
-- individual developers "fork" some shared repository
-- development occurs on individual, forked remote/local repositories
-- individual development gets integrated into shared repository through Pull Requests (PRs)
+Welcome to the Forking Workflow tutorial! Here we will demonstrate a workflow that allows for collaborative development of a shared code repository. In brief, the "Forking Workflow" can be described as:
+- Individual developers "fork" some shared repository
+- Development occurs on individual, forked repositories
+- Individual development gets integrated into shared repository through Pull Requests (PRs)
+
+
+The Forking Workflow involves 3 different repositories:
+- **Upstream, or "Parent" Repo**: This remote repository belongs to some organization that is not the individual developer. Maintainers of this repository control who gets to make changes, and can review/accept/decline and incoming changes through pull requests. 
+- **Origin, or "Forked Remote" Repo**: This remote repository is a fork of the "Parent", and belongs to the individual developer. Any changes made here are separate from the parent. The individual developer can create pull requests from this repo to the parent. 
+- **Local Repo**: This is the local repo on the device of the individual developer, and it is where development occurs. It is a clone of the "Forked Remote" repo. 
+
 ![featured_hud478d74d48d19bfd1c1c03fc398c8033_312322_720x0_resize_lanczos_3](https://user-images.githubusercontent.com/97498519/176066441-ac8fadbf-a6c3-4dd1-b137-d59274bdcb0e.png)
 
-**Honorable mention**: There is a separate workflow that you may encounter which uses branches within the same repository to achieve similar affects. There is a tutorial for that as well: https://github.com/pqz317/cnc_github_tutorial/blob/main/feature_branch_workflow.md 
+
+**Note**: There is a separate workflow that you may encounter which uses branches within the same repository to achieve similar affects. There is a tutorial for that as well: https://github.com/pqz317/cnc_github_tutorial/blob/main/feature_branch_workflow.md 
 
 The steps through this demo are:
-1. Fork this repo on Github
-2. Clone this forked repo to a local repo
+1. Fork this "Parent" Repo to create a "Forked" Repo
+2. Clone the "Forked" Repo to create a Local Repo
 3. Make local changes 
-4. Push your changes to your forked repo on Github
-5. Creating a Pull Request to integrate your changes into the "parent" repo
-6. Fetching changes from the parent repo to your local repo
-7. (Potentially) resolving 
+4. Push your changes to your "Forked" repo on Github
+5. Create a Pull Request to integrate your changes into the "Parent" repo
+6. Fetch changes from the parent repo to your local repo
+7. (Potentially) Resolve merge conflicts
 
-## 1. Forking a Repo
-If there is an existing remote repository you'd like to start development on, usually the first thing to do would be to create a "fork" of this repository for yourself. This provides you with a repository on Github that is a clone of its "parent", where you can do any type of development and testing on without affecting the parent. 
-Fork this repo with 
+## 1. Fork this "Parent" Repo to create a "Forked" Repo
+Say there is an existing remote repository that belongs to some organization, and you'd like to start development on it, usually the first thing to do would be to create a "fork" of this repository for yourself. This provides you with a repository on Github that is a clone of its "parent", where you can do any type of development and testing on without affecting the parent. 
 
-For this repo, the command to run locally will be: 
+For this tutorial, you can fork this repo with the "fork" button on Github: 
+<img width="1000" alt="Screen Shot 2022-06-27 at 7 00 30 PM" src="https://user-images.githubusercontent.com/97498519/176095938-ef63421c-a878-426b-bcfb-2a3e736d3b2c.png">
+You have now successfully "forked" the `cnc_github_tutorial` repo, and created a new repo that is `<YOUR_USERNAME>/cnc_github_tutorial`
+
+
+## 2. Clone the "Forked" Repo to create a Local Repo
+Your "forked" repo still only lives on Github, so to obtain a local copy of it and begin developing, run 
 ```
-git clone https://github.com/pqz317/cnc_github_tutorial.git
+git clone https://github.com/<YOUR_USERNAME>/cnc_github_tutorial.git
 ```
-The URL can always be found under the "Clone" Section of the Github page of the repo: 
+The URL can always be found under the "Clone" Section of the Github page of your "forked" repo: 
 <img width="800" alt="Screen Shot 2022-06-27 at 9 42 45 AM" src="https://user-images.githubusercontent.com/97498519/175992957-a6794a57-b257-474e-b2ef-73859bfe40d2.png">
 Once cloned, you should have a directory `cnc_github_tutorial` in your local filesystem. Run `git status` to verify that the directory is a git repository, and that you are on the `main` branch. An example output: 
 ```
@@ -36,7 +49,8 @@ Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
 ```
-You have now successfully cloned a repo!
+
+
 
 ## 2. Creating a new local branch
 One general convention is to keep your local `main` branch tracking the `main` in the remote, and perform any development on a different branch
