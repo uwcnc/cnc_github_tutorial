@@ -74,3 +74,15 @@ Doing so both backs up your changes, and gets you ready to create a pull request
 Now, to integrate your changes into the "Parent" repo, you can create a Pull Request via Github. 
 Navigate to https://github.com/<YOUR_USERNAME>/cnc_github_tutorial. 
 
+
+## 6. Fetch changes from the parent repo to your local repo
+While you were busy working on your awesome feature, other changes might've been merged into "Parent" as well, so before working on anything else, its always good to have your local repo up-to-date with what's in "Parent". In Step 2, we already configured our local git repo to track the "Parent" repo as "Upstream", so now we can just do:
+```
+git fetch upstream  # fetches upstream branches
+git merge upstream/main  # merges upstream/main into your local main branch
+```
+Alternatively, a `git pull` command also works:
+```
+git pull upstream main
+```
+Now, any changes that have been merged into "Parent" should also be reflected in your local repo. 
