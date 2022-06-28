@@ -58,7 +58,7 @@ This will tell your local git repo about another remote repo, and name it upstre
 ## 3. Make local changes 
 In your local repository, feel free to make any changes you'd like. For simplicity, you can create a new file `<YOUR_NAME>_test.txt` and add some text to it. Once that is saved, remember to `git add` and `git commit` your changes:
 ```
-git add . && git commit -m "created new file"
+git add . && git commit -m "create new file"
 ```
 
 ## 4. Push your changes to your "Forked" repo on Github
