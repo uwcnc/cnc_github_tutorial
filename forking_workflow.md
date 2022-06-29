@@ -96,7 +96,7 @@ This command creates a commit from the changes in staging, and adds associated c
 
 **Note about commit messages:**
 - Messages should be brief but informative. "fix bug" won't be too useful a year later. 
-- Current standard is to use imperative mood, "write an awesome function" instead of "wrote and awesome function"
+- Current standard is to use imperative mood, "write an awesome function" instead of "wrote an awesome function"
 - More info in this post: https://cbea.ms/git-commit/
 
 ### **To do this in VSCode:**
@@ -145,9 +145,11 @@ git pull upstream main
 Now, any changes that have been merged into "Parent" should also be reflected in your local repo. 
 
 ### **To do this in VSCode:**
-On the "Source Control" tab, pull from `upstream`:                                                                                    
+On the "Source Control" tab, pull from the main branch of `upstream`:                                                                                    
 ![18_vscode_fetchupstream](https://user-images.githubusercontent.com/91637560/176327614-5f9bf285-5f6a-4497-bb27-93a9ee59e815.png)
 ![18_vscode_fetchupstream2](https://user-images.githubusercontent.com/91637560/176327658-91156793-9ee5-4526-a5ae-d470704ca1ff.png)
+![18_vscode_fetchupstream_main](https://user-images.githubusercontent.com/91637560/176515466-e5e505ee-cde4-475e-9623-0b64d238ba6b.png)
+
 
 Your local repo is now up-to-date with the "Parent" repo. Sync these changes to make your remote repo up-to-date with "Parent" as well.
 
@@ -177,7 +179,7 @@ The text within the `<<<<<<<` and the `>>>>>>>` are the conflicting areas.
 Anything between `<<<<<<< HEAD` and `=======` represent what you had in the file, before trying to merge in any new changes. 
 Anything between `=======` and `>>>>>>>` represent what the incoming changes are. 
 You can choose to accept what you had, the incoming changes, both, or a mixture of the two. 
-For our example, let's choose to accept both, so remove the any lines with `<<<<<<< HEAD`, `=======` and `>>>>>>>`
+For our example, let's choose to accept both changes, so remove the any lines with `<<<<<<< HEAD`, `=======` and `>>>>>>>`
 Your file should now look like:
 ```
 This file contains some text
@@ -190,3 +192,22 @@ Now, to finish up the merge, we need to add/commit our changes.
 git add . && git commit -m "resolve merge conflict, keep both changes"
 ```
 Your merge conflict has been successfully resolved!
+
+### **To do this in VSCode:**
+On the "Source Control" tab, pull from the patrick_branch of `upstream`:                                                                                    
+![18_vscode_fetchupstream](https://user-images.githubusercontent.com/91637560/176327614-5f9bf285-5f6a-4497-bb27-93a9ee59e815.png)
+![18_vscode_fetchupstream2](https://user-images.githubusercontent.com/91637560/176327658-91156793-9ee5-4526-a5ae-d470704ca1ff.png)
+![18_vscode_fetchupstream_patrick](https://user-images.githubusercontent.com/91637560/176515741-3dc5fa6a-553a-4ce5-9778-34ce1066b314.png)
+
+You will get this error:
+![19_vscode_mergeconflict](https://user-images.githubusercontent.com/91637560/176515903-ab107e97-da14-4f05-8e19-d7fdc55b5296.PNG)
+
+Use "Compare Changes" to get a side-by-side comparison of the changes (current changes in red, incoming changes in green):
+![19_vscode_mergeconflict_comparechanges](https://user-images.githubusercontent.com/91637560/176516013-fe1fe0a3-57b2-40fa-ab77-ee00ed54c5fd.PNG)
+
+For our example, let's choose to accept both changes:
+![19_vscode_mergeconflict_acceptboth](https://user-images.githubusercontent.com/91637560/176516212-c7b47282-ed4a-47cb-98ff-837f2b0e34d0.png)
+
+You have successfully merged the changes in your local repo! Be sure to stage, commit, and sync the changes so they are reflected in your remote repo.
+
+
