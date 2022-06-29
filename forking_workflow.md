@@ -155,9 +155,12 @@ Automatic merge failed; fix conflicts and then commit the result.
 Opening up some_file.txt in any text editor, you should see something like:
 ```
 This file contains some text
+<<<<<<< HEAD
 Some change katherine has made
 Another change katherine has made
+=======
 Some change patrick has made
+>>>>>>> b49f523264642383fb9c61bda4dcd0348f11d695
 ```
 The text within the `<<<<<<<` and the `>>>>>>>` are the conflicting areas. 
 Anything between `<<<<<<< HEAD` and `=======` represent what you had in the file, before trying to merge in any new changes. 
