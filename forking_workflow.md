@@ -85,8 +85,18 @@ Now you have access to local, remote (origin), and remote parent (upstream) bran
 ## 3. Make local changes 
 In your local repository, feel free to make any changes you'd like. For simplicity, you can create a new file `<YOUR_NAME>_test.txt` and add some text to it. Once that is saved, remember to `git add` and `git commit` your changes:
 ```
-git add . && git commit -m "created new file"
+git add . 
 ```
+This command adds **all** changes to staging. You can also choose to be more  granular here and only add certain files, with `git add <FILE_NAME>`. 
+Then: 
+```
+git commit -m "create new file"
+```
+This command creates a commit from the changes in staging, and adds associated commit message. 
+**Note about commit messages:**
+- Messages should be brief but informative. "fix bug" won't be too useful a year later. 
+- Current standard is to use imperative mood, "write an awesome function" instead of "wrote and awesome function"
+- More info in this post: https://cbea.ms/git-commit/
 
 ### **To do this in VSCode:**
 
