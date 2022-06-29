@@ -1,5 +1,7 @@
 # Forking Workflow
 
+**Note**: There is a separate workflow that you may encounter which uses branches within the same repository to achieve similar effects. There is a tutorial for that as well: https://github.com/pqz317/cnc_github_tutorial/blob/main/feature_branch_workflow.md 
+
 ## Intro
 Welcome to the Forking Workflow tutorial! Here we will demonstrate a workflow that allows for collaborative development of a shared code repository. In brief, the "Forking Workflow" can be described as:
 - Individual developers "fork" some shared repository
@@ -13,9 +15,6 @@ The Forking Workflow involves 3 different repositories:
 - **Local Repo**: This is the local repo on the device of the individual developer, and it is where development occurs. It is a clone of the "Forked Remote" repo. 
 
 ![featured_hud478d74d48d19bfd1c1c03fc398c8033_312322_720x0_resize_lanczos_3](https://user-images.githubusercontent.com/97498519/176066441-ac8fadbf-a6c3-4dd1-b137-d59274bdcb0e.png)
-
-
-**Note**: There is a separate workflow that you may encounter which uses branches within the same repository to achieve similar effects. There is a tutorial for that as well: https://github.com/pqz317/cnc_github_tutorial/blob/main/feature_branch_workflow.md 
 
 The steps through this demo are:
 1. Fork this "Parent" Repo to create a "Forked" Repo
