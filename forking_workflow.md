@@ -52,7 +52,7 @@ Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
 ```
-**Note**: `origin/main` here refers to the main branch of the origin repo. `Main` is the main branch. We won't go into branching too much here, so just ignore that. `Origin` is a name for the remote repository this local repository is cloned from, the "Forked" repo. Git by default keeps track of this remote repo after a `git clone` command. It will also be helpul for git to keep track of another remote repo, the "Parent" repo. To configure this, run:
+**Note**: `origin/main` here refers to the main branch of the origin repo. `main` is the main branch. We won't go into branching too much here, so just ignore that. `Origin` is a name for the remote repository this local repository is cloned from, the "Forked" repo. Git by default keeps track of this remote repo after a `git clone` command. It will also be helpul for git to keep track of another remote repo, the "Parent" repo. To configure this, run:
 ```
 git remote add upstream https://github.com/uwcnc/cnc_github_tutorial.git
 ```
