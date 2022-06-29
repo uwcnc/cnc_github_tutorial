@@ -93,6 +93,7 @@ Then:
 git commit -m "create new file"
 ```
 This command creates a commit from the changes in staging, and adds associated commit message. 
+
 **Note about commit messages:**
 - Messages should be brief but informative. "fix bug" won't be too useful a year later. 
 - Current standard is to use imperative mood, "write an awesome function" instead of "wrote and awesome function"
