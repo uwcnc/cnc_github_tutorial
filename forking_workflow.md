@@ -139,3 +139,40 @@ On the "Source Control" tab, pull from `upstream`:
 ![18_vscode_fetchupstream2](https://user-images.githubusercontent.com/91637560/176327658-91156793-9ee5-4526-a5ae-d470704ca1ff.png)
 
 Your local repo is now up-to-date with the "Parent" repo. Sync these changes to make your remote repo up-to-date with "Parent" as well.
+
+## 7. (Potentially) Resolve merge conflicts
+Merge conflicts arise when Git doesn't know how to reconcile conflicting changes occuring on the same file. In these situations, Git leaves it to the user to figure out how to best resolve the conflicting changes. 
+For this example, to create a merge conflict, navigate to your local repo and run:
+```
+git pull upstream patrick_branch
+```
+Don't worry too much about the specifics of this command for now. You should see some text:
+```
+Auto-merging some_file.txt
+CONFLICT (content): Merge conflict in some_file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+Opening up some_file.txt in any text editor, you should see something like:
+```
+This file contains some text
+Some change katherine has made
+Another change katherine has made
+Some change patrick has made
+```
+The text within the `<<<<<<<` and the `>>>>>>>` are the conflicting areas. 
+Anything between `<<<<<<< HEAD` and `=======` represent what you had in the file, before trying to merge in any new changes. 
+Anything between `=======` and `>>>>>>>` represent what the incoming changes are. 
+You can choose to accept what you had, the incoming changes, both, or a mixture of the two. 
+For our example, let's choose to accept both, so remove the any lines with `<<<<<<< HEAD`, `=======` and `>>>>>>>`
+Your file should now look like:
+```
+This file contains some text
+Some change katherine has made
+Another change katherine has made
+Some change patrick has made
+```
+Now, to finish up the merge, we need to add/commit our changes. 
+```
+git add . && git commit -m "resolve merge conflict, keep both changes"
+```
+Your merge conflict has been successfully resolved!
