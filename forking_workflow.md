@@ -15,7 +15,7 @@ The Forking Workflow involves 3 different repositories:
 ![featured_hud478d74d48d19bfd1c1c03fc398c8033_312322_720x0_resize_lanczos_3](https://user-images.githubusercontent.com/97498519/176066441-ac8fadbf-a6c3-4dd1-b137-d59274bdcb0e.png)
 
 
-**Note**: There is a separate workflow that you may encounter which uses branches within the same repository to achieve similar affects. There is a tutorial for that as well: https://github.com/pqz317/cnc_github_tutorial/blob/main/feature_branch_workflow.md 
+**Note**: There is a separate workflow that you may encounter which uses branches within the same repository to achieve similar effects. There is a tutorial for that as well: https://github.com/pqz317/cnc_github_tutorial/blob/main/feature_branch_workflow.md 
 
 The steps through this demo are:
 1. Fork this "Parent" Repo to create a "Forked" Repo
@@ -132,3 +132,10 @@ Alternatively, a `git pull` command also works:
 git pull upstream main
 ```
 Now, any changes that have been merged into "Parent" should also be reflected in your local repo. 
+
+### **To do this in VSCode:**
+On the "Source Control" tab, pull from `upstream`:                                                                                    
+![18_vscode_fetchupstream](https://user-images.githubusercontent.com/91637560/176327614-5f9bf285-5f6a-4497-bb27-93a9ee59e815.png)
+![18_vscode_fetchupstream2](https://user-images.githubusercontent.com/91637560/176327658-91156793-9ee5-4526-a5ae-d470704ca1ff.png)
+
+Your local repo is now up-to-date with the "Parent" repo. Sync these changes to make your remote repo up-to-date with "Parent" as well.
